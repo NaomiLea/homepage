@@ -40,6 +40,7 @@ $(document).ready(function() {
 
     });
 
+
     $(".toAnimation").click(function(){
       $(".room").animate({
           "margin-top": "+=85vh"

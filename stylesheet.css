@@ -1,5 +1,11 @@
 body {
     background: url("sprinkles.png");
+    overflow-x: hidden;
+}
+
+#about{
+    font-family: 'Lobster', cursive;
+    color: #53131E;
 }
 
 header {
@@ -7,6 +13,9 @@ header {
     color: #FFEFBD;
     font-size: 24px;
     font-family: 'Lobster', cursive;
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
 }
 
 .title {
@@ -23,6 +32,7 @@ header {
 .room {
     height: 85vh;
     background: url("tree_bark.png");
+    margin-top: 11.2vh;
 }
 
 .floor {
@@ -213,6 +223,10 @@ header {
     border-radius: 5px 5px 5px 5px;
 }
 
+#screen:hover {
+  background: url("https://media.giphy.com/media/3oz8xH46dD1DSx3vNK/source.gif");
+  background-size: 100% 100%;
+}
 #keyboard {
     width: 10vw;
     height: .5vh;
@@ -279,40 +293,77 @@ header {
     bottom: 46vh;
     right: 22vw;
 }
+
 .bodyLeg {
-  width: 1.5vw;
-  height:10vh;
-  background: url("jeans.jpg");
-  border-bottom:solid;
-  border-color: rgb(199, 39, 140);
-  border-width: 1vw;
-  border-radius:0 0 5px 5px;
-  position: absolute;
-  bottom: 15vh;
-  z-index: 1;
+    width: 1.5vw;
+    height: 10vh;
+    background: url("jeans.jpg");
+    border-bottom: solid;
+    border-color: rgb(199, 39, 140);
+    border-width: 1vw;
+    border-radius: 0 0 5px 5px;
+    position: absolute;
+    bottom: 15vh;
+    z-index: 1;
 }
+
 #bodyOne {
     right: 25vw;
 }
 
 #bodyTwo {
-  right: 22vw;
+    right: 22vw;
 }
 
 #arm {
-  height: 2vh;
-  width: 5vw;
-  background-color:rgb(79, 0, 89);
-  position: absolute;
-  bottom: 35vh;
-  right: 17.5vw;
-  border-right: solid;
-  border-right-width: 1vw;
-  border-color:rgb(240, 205, 204);
-  border-radius: 0 5px 3px 0
+    height: 2vh;
+    width: 5vw;
+    background-color: rgb(79, 0, 89);
+    position: absolute;
+    bottom: 35vh;
+    right: 17.5vw;
+    border-right: solid;
+    border-right-width: 1vw;
+    border-color: rgb(240, 205, 204);
+    border-radius: 0 5px 3px 0
 }
 
-.glyphicon-chevron-down, .glyphicon-chevron-up  {
-  font-size: 18px;
-  color: #53131E
+.glyphicon-chevron-down, .glyphicon-chevron-up {
+    font-size: 18px;
+    color: #53131E
+}
+
+.toAnimation {
+    background-color: #264134;
+    color: #FFEFBD;
+    width: 100vw;
+    height: 4vh;
+    margin-top: -5px;
+    padding-top: 2px;
+}
+
+#profileImg {
+    border-radius: 100%;
+    height: 50vh;
+    width: 25vw;
+    margin-top: 20%;
+    border: solid;
+    border-color: #264134;
+    border-width: 5px;
+
+}
+
+#line {
+  width: 100px;
+  height: 5px;
+  background-color:#264134;
+  margin-bottom: 10px;
+}
+
+.seperate {
+  display: inline-block;
+}
+
+.glyphicon-heart-empty {
+  font-size: 36px;
 }
