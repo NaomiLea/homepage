@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    $(".toAnimation").hide();
     $("#pullMe").click(function() {
         $("#blindsString").addClass("pulled");
         $("#pullMe").hide();
@@ -28,6 +29,25 @@ $(document).ready(function() {
 
 
     });
+
+    $(".toAbout").click(function() {
+        $(".room").animate({
+            "margin-top": "-=85vh"
+        });
+        $(".room").css("z-index", -1);
+        $(".toAbout").hide();
+        $(".toAnimation").show();
+
+    });
+
+    $(".toAnimation").click(function(){
+      $(".room").animate({
+          "margin-top": "+=85vh"
+      });
+      $(".room").css("z-index", 1);
+      $(".toAbout").show();
+      $(".toAnimation").hide();
+    })
 
 
 });
