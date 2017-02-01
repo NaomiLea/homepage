@@ -130,3 +130,71 @@ header {
         height: 40vh
     }
 }
+
+.up {
+    -webkit-animation: goingUp 2s ease-in
+}
+
+@keyframes goingUp {
+    0% {
+        height: 30vh;
+    }
+    33% {
+        height: 20vh
+    }
+    66% {
+        height: 10vh
+    }
+    100% {
+        height: 0vh
+    }
+}
+
+#top {
+    width: 30vw;
+    height: 5vh;
+    background: url("dark_wood.png");
+    border-color: rgb(0, 0, 0);
+    border: solid;
+    position: absolute;
+    right: 10vw;
+    bottom: 30vh;
+}
+
+#legOne, #legTwo {
+    position: absolute;
+    background: url("dark_wood.png");
+    border-color: rgb(0, 0, 0);
+    border: solid;
+    width: 2vw;
+    height: 20vh;
+    bottom: 10vh;
+    z-index: 1;
+}
+
+#legOne {
+    right: 10vw;
+}
+
+#legTwo {
+    right: 38vw;
+}
+
+.screen {
+    background-color: rgb(41, 41, 41);
+    position: absolute;
+}
+
+#bottom {
+    width: 8vw;
+    height: 1vh;
+    bottom: 35vh;
+    right: 20vw;
+}
+
+#stand {
+    width: 3vw;
+    height: 5vh;
+    right: 22.5vw;
+    bottom: 36vh;
+}
