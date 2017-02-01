@@ -35,7 +35,8 @@ header {
 }
 
 .window {
-    background-color: rgb(147, 204, 236);
+    background: url("https://media.giphy.com/media/tupdaCkTRWHMk/giphy.gif");
+    background-size: 100% 100%;
     width: 15vw;
     height: 30vh;
     position: absolute;
@@ -209,4 +210,61 @@ header {
     position: absolute;
     bottom: 41vh;
     right: 19vw;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#keyboard {
+  width: 10vw;
+  height: .5vh;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 35vh;
+  right: 19vw;
+  border: solid;
+  border-width: .1vw;
+  border-color: rgb(0, 0, 0);
+}
+
+#mouse {
+  width: 1.5vw;
+  height: 1vh;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 35vh;
+  right: 15vw;
+  border: solid;
+  border-width: .1vw;
+  border-color: rgb(0, 0, 0);
+  border-radius: 10px 10px 0 0;
+}
+
+#seat {
+  width: 8vw;
+  height: 22vh;
+  background: url("purty_wood.png");
+  z-index: 2;
+  position: absolute;
+  border-radius: 10px 10px 0 0;
+  bottom: 25vh;
+  right: 20vw;
+}
+
+#chairOne {
+  background: url("purty_wood.png");
+  width: 1.5vw;
+  height: 15vh;
+  position: absolute;
+  bottom:10vh;
+  right: 20vw;
+  z-index: 1;
+}
+
+#chairTwo {
+  background: url("purty_wood.png");
+  width: 1.5vw;
+  height: 15vh;
+  position: absolute;
+  bottom:10vh;
+  right: 26.5vw;
+  z-index: 1;
 }
