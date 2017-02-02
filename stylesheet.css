@@ -33,6 +33,7 @@ header {
     height: 85vh;
     background: url("tree_bark.png");
     margin-top: 11.2vh;
+    z-index: -1;
 }
 
 .floor {
@@ -393,4 +394,13 @@ a, a:active,  a:visited {
 a:hover, a:focus {
   text-decoration: none;
   color:rgb(238, 176, 182) !important;
+}
+
+.portfolioImage {
+  width: 20vw;
+  height: 30vh;
+}
+
+#row {
+  margin-bottom: 10px;
 }
