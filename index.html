@@ -3,6 +3,7 @@
 <html>
 
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -20,8 +21,9 @@
             </div>
             <div class="col-lg-4">
                 <p class="menu" id="home"><span class="glyphicon glyphicon-home"></span> Home</p>
-                <p class="menu" id="about"><span class="glyphicon glyphicon-user"></span> About </p>
-                <p class="menu" id="portfolio"><span class="glyphicon glyphicon-briefcase"></span> Portfolio</p>
+                <a href="#aboutPage">
+                    <p class="menu" id="about"><span class="glyphicon glyphicon-user"></span> About</p></a>
+                <a href="#portfolioPage"><p class="menu" id="portfolio"><span class="glyphicon glyphicon-briefcase"></span> Portfolio</p></a>
                 <p class="menu" id="contact"><span class="glyphicon glyphicon-pencil"></span> Contact</p>
             </div>
         </div>
@@ -146,26 +148,40 @@
 
         </div>
     </div>
+    <div id="aboutPage">
     <center>
         <span class="glyphicon glyphicon-chevron-down toAbout"></span>
         <span class="glyphicon glyphicon-chevron-up toAnimation"></span>
     </center>
-    <div class="col-md-6 col-sm-12">
-        <center>
-            <img src="profile.jpg" id="profileImg" />
-        </center>
+
+        <div class="col-md-6 col-sm-12">
+            <center>
+                <img src="profile.jpg" id="profileImg" />
+            </center>
+        </div>
+        <div class="col-md-6">
+            <center>
+                <h1 class="about">About</h1>
+            </center>
+            <center>
+                <div id="seperation">
+                    <div id="line" class="seperate"></div>
+                    <span class="glyphicon glyphicon-heart seperate"></span>
+                    <div id="line" class="seperate"></div>
+                </div>
+            </center>
+            <p id="description">Spicy jalapeno bacon ipsum dolor amet corned beef pastrami ham hock, bacon prosciutto rump cupim venison picanha tri-tip brisket bresaola flank jowl. Prosciutto shank tenderloin pork chop, jerky shankle chuck flank pork loin short ribs cow.
+                Corned beef sirloin ball tip, chuck capicola beef ribs filet mignon kielbasa tongue shoulder hamburger frankfurter. Short ribs ball tip drumstick swine ground round tongue leberkas flank turducken andouille ribeye beef. Cow alcatra shankle
+                beef ribs frankfurter tenderloin jowl ham leberkas.</p>
+        </div>
     </div>
-    <div class="col-md-6">
+    <div id="portfolioPage">
+      <div class="col-sm-12">
         <center>
-            <h1 id="about">About</h1>
-        </center>
-        <center>
-            <div id="seperation">
-                <div id="line" class="seperate"></div>
-                <span class="glyphicon glyphicon-heart-empty seperate"></span>
-                <div id="line" class="seperate"></div>
-            </div>
-        </center>
+          <h1 class="portfolioTitle">Portfolio
+          </h1>
+
+      </div>
     </div>
 
     <script src="index.js"></script>
