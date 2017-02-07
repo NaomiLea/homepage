@@ -1,11 +1,19 @@
+
+@mixin headlines{
+  font-family: 'Lobster', cursive;
+  color: #53131E;
+
+}
+
 body {
     background: url("sprinkles.png");
     overflow-x: hidden;
 }
 
 .about, .portfolioTitle, .contactTitle {
-    font-family: 'Lobster', cursive;
-    color: #53131E;
+    // font-family: 'Lobster', cursive;
+    // color: #53131E;
+    @include headlines;
 }
 
 .portfolioTitle {
