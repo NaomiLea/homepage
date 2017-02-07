@@ -1,8 +1,8 @@
-
-@mixin headlines{
-  font-family: 'Lobster', cursive;
-  color: #53131E;
-
+$headLinesFont: 'Lobster', cursive;
+$paragraphFont: 'Open Sans', sans-serif;
+@mixin headlines($font-family: $headLinesFont, $color: #53131E) {
+    font-family: $font-family;
+    color: $color;
 }
 
 body {
@@ -10,21 +10,20 @@ body {
     overflow-x: hidden;
 }
 
-.about, .portfolioTitle, .contactTitle {
-    // font-family: 'Lobster', cursive;
-    // color: #53131E;
+.about,
+.contactTitle,
+.portfolioTitle {
     @include headlines;
 }
 
 .portfolioTitle {
-    margin-top: 70px
+    margin-top: 70px;
 }
 
 header {
+    @include headlines($color: #FFEFBD);
     background-color: #53131E;
-    color: #FFEFBD;
     font-size: 24px;
-    font-family: 'Lobster', cursive;
     position: fixed;
     z-index: 1;
     width: 100vw;
@@ -51,13 +50,14 @@ header {
 .floor {
     background-color: #264134;
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     height: 20vh;
     width: 100vw;
     margin-left: -15px;
 }
 
 .window {
+    @extend .blinds;
     background: url("https://media.giphy.com/media/tupdaCkTRWHMk/giphy.gif");
     background-size: 100% 100%;
     width: 15vw;
@@ -65,9 +65,7 @@ header {
     position: absolute;
     top: 50px;
     left: 40px;
-    border-style: groove;
     border-width: 10px;
-    border-color: rgb(255, 255, 255);
 }
 
 .blinds {
@@ -94,12 +92,11 @@ header {
 }
 
 #pull {
-    font-family: 'Lobster', cursive;
+    @include headlines($color: #FFEFBD);
     background-color: #53131E;
-    color: #FFEFBD;
     width: 3.5vw;
     border-radius: 10px;
-    padding: 2px 2px 2px 2px;
+    padding: 2px;
 }
 
 #pullMe {
@@ -110,67 +107,74 @@ header {
 }
 
 #blindsDown {
-    height: 0vh;
+    height: 0;
     overflow: hidden;
 }
 
 .pulled {
-    -webkit-animation: pulling 2s infinite
+    -webkit-animation: pulling 2s infinite;
 }
-
 @keyframes pulling {
     0% {
-        height: 30vh
+        height: 30vh;
     }
+
     33% {
         height: 35vh;
     }
+
     66% {
         height: 40vh;
     }
+
     90% {
         height: 35vh;
     }
+
     100% {
         height: 30vh;
     }
 }
 
 .down {
-    -webkit-animation: goingDown 2s ease-in
+    -webkit-animation: goingDown 2s ease-in;
 }
-
 @keyframes goingDown {
     0% {
-        height: 0vh
+        height: 0;
     }
+
     33% {
-        height: 20vh
+        height: 20vh;
     }
+
     66% {
-        height: 30vh
+        height: 30vh;
     }
+
     100% {
-        height: 40vh
+        height: 40vh;
     }
 }
 
 .up {
-    -webkit-animation: goingUp 2s ease-in
+    -webkit-animation: goingUp 2s ease-in;
 }
-
 @keyframes goingUp {
     0% {
         height: 30vh;
     }
+
     33% {
-        height: 20vh
+        height: 20vh;
     }
+
     66% {
-        height: 10vh
+        height: 10vh;
     }
+
     100% {
-        height: 0vh
+        height: 0;
     }
 }
 
@@ -185,7 +189,8 @@ header {
     bottom: 30vh;
 }
 
-#legOne, #legTwo {
+#legOne,
+#legTwo {
     position: absolute;
     background: url("dark_wood.png");
     border-color: rgb(0, 0, 0);
@@ -234,67 +239,66 @@ header {
     bottom: 41vh;
     right: 19vw;
     border-radius: 5px 5px 5px 5px;
-}
 
-#screen:hover {
-    background: url("https://media.giphy.com/media/3oz8xH46dD1DSx3vNK/source.gif");
-    background-size: 100% 100%;
+    &:hover {
+        background: url("https://media.giphy.com/media/3oz8xH46dD1DSx3vNK/source.gif");
+        background-size: 100% 100%;
+    }
+}
+@mixin computer {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border: solid;
+    border-width: 0.1vw;
+    border-color: rgb(0, 0, 0);
 }
 
 #keyboard {
+    @include computer;
     width: 10vw;
-    height: .5vh;
-    background-color: rgb(255, 255, 255);
-    position: absolute;
+    height: 0.5vh;
     bottom: 35vh;
     right: 19vw;
-    border: solid;
-    border-width: .1vw;
-    border-color: rgb(0, 0, 0);
 }
 
 #mouse {
+    @include computer;
     width: 1.5vw;
     height: 1vh;
-    background-color: rgb(255, 255, 255);
-    position: absolute;
     bottom: 35vh;
     right: 17vw;
-    border: solid;
-    border-width: .1vw;
-    border-color: rgb(0, 0, 0);
     border-radius: 10px 10px 0 0;
+}
+@mixin chair {
+    background: url("purty_wood.png");
+    position: absolute;
+    z-index: 1;
 }
 
 #seat {
+    @include chair;
     width: 8vw;
     height: 22vh;
-    background: url("purty_wood.png");
     z-index: 2;
-    position: absolute;
     border-radius: 10px 10px 0 0;
     bottom: 25vh;
     right: 20vw;
 }
 
 #chairOne {
-    background: url("purty_wood.png");
+    @include chair;
     width: 1.5vw;
     height: 15vh;
-    position: absolute;
     bottom: 10vh;
     right: 20vw;
-    z-index: 1;
 }
 
 #chairTwo {
-    background: url("purty_wood.png");
     width: 1.5vw;
     height: 15vh;
-    position: absolute;
+    @include chair;
     bottom: 10vh;
     right: 26.5vw;
-    z-index: 1;
 }
 
 #head {
@@ -339,12 +343,13 @@ header {
     border-right: solid;
     border-right-width: 1vw;
     border-color: rgb(240, 205, 204);
-    border-radius: 0 5px 3px 0
+    border-radius: 0 5px 3px 0;
 }
 
-.glyphicon-chevron-down, .glyphicon-chevron-up {
+.glyphicon-chevron-down,
+.glyphicon-chevron-up {
     font-size: 18px;
-    color: #53131E
+    color: #53131E;
 }
 
 .toAnimation {
@@ -379,20 +384,21 @@ header {
 
 .glyphicon-heart {
     font-size: 36px;
-    color: #53131E
+    color: #53131E;
 }
 
 #description {
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
-    color: #53131E
+    color: #53131E;
 }
 
 #aboutPage {
     height: 96vh;
 }
 
-#portfolioPage, {
+,
+#portfolioPage {
     height: 100vh;
 }
 
@@ -401,15 +407,17 @@ header {
     font-family: 'Open Sans', sans-serif;
 }
 
-a, a:active, a:visited {
+a,
+a:active,
+a:visited {
     text-decoration: none;
     cursor: pointer;
     color: #FFEFBD;
-}
 
-a:hover, a:focus {
-    text-decoration: none;
-    color: rgb(238, 176, 182) !important;
+    a:focus,
+    a:hover {
+        color: rgb(238, 176, 182) !important;
+    }
 }
 
 .portfolioImage {
@@ -423,15 +431,17 @@ a:hover, a:focus {
 
 form {
     width: 50%;
+    label {
+      float: left;
+    }
 }
 
-input[type="text"], input[type="email"], input[type="tel"], textarea {
+input[type="email"],
+input[type="tel"],
+input[type="text"],
+textarea {
     background: url("sprinkles.png") !important;
     border-color: rgba(215, 215, 215, 0) rgba(227, 227, 227, 0.31) rgba(215, 215, 215, 0) rgba(227, 227, 227, 0.31) !important;
-}
-
-form label {
-    float: left;
 }
 
 #portfolioPage {
@@ -444,7 +454,6 @@ form label {
 
 .btn-success {
     margin-top: -30px;
-    margin-bottom: 0px;
-    background-color: #53131E !important;
-    font-family: 'Lobster', cursive;
+    margin-bottom: 0;
+    @include headlines;
 }
