@@ -132,21 +132,30 @@ header {
   100% {
     height: 0; } }
 
+.bookshelf {
+  width: 30%;
+  height: 40%;
+  position: absolute;
+  right: 40vw;
+  bottom: 13vh;
+  z-index: 1;
+  cursor: pointer; }
+
 #top {
-  width: 30vw;
-  height: 5vh;
   background: url("dark_wood.png");
   border-color: black;
-  border: solid;
   position: absolute;
+  border: solid;
+  width: 30vw;
+  height: 5vh;
   right: 10vw;
   bottom: 30vh; }
 
 #legOne,
 #legTwo {
-  position: absolute;
   background: url("dark_wood.png");
   border-color: black;
+  position: absolute;
   border: solid;
   width: 2vw;
   height: 20vh;
@@ -234,11 +243,11 @@ header {
   right: 20vw; }
 
 #chairTwo {
-  width: 1.5vw;
-  height: 15vh;
   background: url("purty_wood.png");
   position: absolute;
   z-index: 1;
+  width: 1.5vw;
+  height: 15vh;
   bottom: 10vh;
   right: 26.5vw; }
 
@@ -318,13 +327,12 @@ header {
   color: #53131E; }
 
 #description {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 20px;
-  color: #53131E; }
+  font-family: "Open Sans";
+  color: sans-serif;
+  font-size: 20px; }
 
 #aboutPage {
   height: 96vh; }
-
 
 #portfolioPage {
   height: 100vh; }
@@ -358,19 +366,13 @@ form {
   width: 50%; }
   form label {
     float: left; }
-
-input[type="email"],
-input[type="tel"],
-input[type="text"],
-textarea {
-  background: url("sprinkles.png") !important;
-  border-color: rgba(215, 215, 215, 0) rgba(227, 227, 227, 0.31) rgba(215, 215, 215, 0) rgba(227, 227, 227, 0.31) !important; }
-
-#portfolioPage {
-  margin-bottom: 50px; }
+  form input,
+  form textarea {
+    background: url("sprinkles.png") !important;
+    border-color: rgba(215, 215, 215, 0) rgba(227, 227, 227, 0.31) rgba(215, 215, 215, 0) rgba(227, 227, 227, 0.31) !important; }
 
 .contactTitle {
-  margin-top: 600px; }
+  margin-top: 100px; }
 
 .btn-success {
   margin-top: -30px;

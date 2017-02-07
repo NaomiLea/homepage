@@ -177,24 +177,36 @@ header {
         height: 0;
     }
 }
-
-#top {
-    width: 30vw;
-    height: 5vh;
+@mixin table {
     background: url("dark_wood.png");
     border-color: rgb(0, 0, 0);
-    border: solid;
     position: absolute;
+    border: solid;
+}
+
+.bookshelf {
+  width: 30%;
+  height: 40%;
+  position:absolute;
+  right: 40vw;
+  bottom: 13vh;
+  z-index: 1;
+  cursor: pointer;
+}
+
+
+
+#top {
+    @include table;
+    width: 30vw;
+    height: 5vh;
     right: 10vw;
     bottom: 30vh;
 }
 
 #legOne,
 #legTwo {
-    position: absolute;
-    background: url("dark_wood.png");
-    border-color: rgb(0, 0, 0);
-    border: solid;
+    @include table;
     width: 2vw;
     height: 20vh;
     bottom: 10vh;
@@ -284,20 +296,21 @@ header {
     bottom: 25vh;
     right: 20vw;
 }
-
-#chairOne {
-    @include chair;
+@mixin legs {
     width: 1.5vw;
     height: 15vh;
     bottom: 10vh;
+}
+
+#chairOne {
+    @include chair;
+    @include legs;
     right: 20vw;
 }
 
 #chairTwo {
-    width: 1.5vw;
-    height: 15vh;
     @include chair;
-    bottom: 10vh;
+    @include legs;
     right: 26.5vw;
 }
 
@@ -388,16 +401,14 @@ header {
 }
 
 #description {
-    font-family: 'Open Sans', sans-serif;
+    @include headlines( 'Open Sans', sans-serif);
     font-size: 20px;
-    color: #53131E;
 }
 
 #aboutPage {
     height: 96vh;
 }
 
-,
 #portfolioPage {
     height: 100vh;
 }
@@ -431,25 +442,20 @@ a:visited {
 
 form {
     width: 50%;
+
     label {
-      float: left;
+        float: left;
+    }
+
+    input,
+    textarea {
+        background: url("sprinkles.png") !important;
+        border-color: rgba(215, 215, 215, 0) rgba(227, 227, 227, 0.31) rgba(215, 215, 215, 0) rgba(227, 227, 227, 0.31) !important;
     }
 }
 
-input[type="email"],
-input[type="tel"],
-input[type="text"],
-textarea {
-    background: url("sprinkles.png") !important;
-    border-color: rgba(215, 215, 215, 0) rgba(227, 227, 227, 0.31) rgba(215, 215, 215, 0) rgba(227, 227, 227, 0.31) !important;
-}
-
-#portfolioPage {
-    margin-bottom: 50px;
-}
-
 .contactTitle {
-    margin-top: 600px;
+    margin-top: 100px;
 }
 
 .btn-success {

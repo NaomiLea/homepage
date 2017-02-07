@@ -41,14 +41,16 @@ $(document).ready(function() {
     });
 
 
-    $(".toAnimation").click(function(){
-      $(".room").animate({
-          "margin-top": "+=85vh"
-      });
-      $(".room").css("z-index", 1);
-      $(".toAbout").show();
-      $(".toAnimation").hide();
+    $(".toAnimation").click(function() {
+        $(".room").animate({
+            "margin-top": "+=85vh"
+        });
+        $(".room").css("z-index", 1);
+        $(".toAbout").show();
+        $(".toAnimation").hide();
     })
 
-
+    $(".bookshelf").click(function() {
+        window.open("https://www.goodreads.com/user/show/2133967-naomi");
+    })
 });
