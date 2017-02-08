@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $(".toAnimation").hide();
+
     $("#pullMe").click(function() {
         $("#blindsString").addClass("pulled");
         $("#pullMe").hide();
@@ -29,7 +29,7 @@ $(document).ready(function() {
 
 
     });
-
+    $(".toAnimation").hide();
     $(".toAbout").click(function() {
         $(".room").animate({
             "margin-top": "-=85vh"

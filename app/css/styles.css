@@ -347,12 +347,11 @@ a:visited {
   text-decoration: none;
   cursor: pointer;
   color: #FFEFBD; }
-  a a:focus,
-  a a:hover,
-  a:active a:focus,
-  a:active a:hover,
-  a:visited a:focus,
-  a:visited a:hover {
+  a:focus, a:hover,
+  a:active:focus,
+  a:active:hover,
+  a:visited:focus,
+  a:visited:hover {
     color: #eeb0b6 !important; }
 
 .portfolioImage {
@@ -378,4 +377,5 @@ form {
   margin-top: -30px;
   margin-bottom: 0;
   font-family: "Lobster", cursive;
-  color: #53131E; }
+  color: #53131E;
+  background-color: #53131E !important; }
