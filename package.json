@@ -25,6 +25,7 @@
     "express": "^4.14.1",
     "nodemailer": "^3.0.2",
     "nodemailer-smtp-pool": "^2.8.2",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "transporter": "0.0.1"
   }
 }
